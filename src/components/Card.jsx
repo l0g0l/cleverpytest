@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Card = ({dataposts}) => {
-    // console.log(dataposts);
+    //show the card content using props
     return (
         <div className="container-card">
             <div className="aside"></div>

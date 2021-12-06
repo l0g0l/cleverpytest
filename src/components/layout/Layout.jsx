@@ -12,20 +12,20 @@ const Layout = () => {
 
     useEffect(() => {
         const getPosts = async () => {
-            const resultPosts = await axios.get('https://jsonplaceholder.typicode.com/posts')
-            setPosts(resultPosts.data)
+            const resultPosts = await axios.get('https://jsonplaceholder.typicode.com/posts') 
+            setPosts(resultPosts.data) //obtein every data posts and set in the state
             console.log(resultPosts)
         }
         getPosts()
 
     }, [])
 
-
     return (
         <>
             <Header />
             <NavBar />
             <main>
+                {/*posts it's an array, I iterate it and I paint as many cards as there are posts */}
                 {posts.map((item => {
                     return <Card dataposts={item} key={item.id} />
                 }))}
