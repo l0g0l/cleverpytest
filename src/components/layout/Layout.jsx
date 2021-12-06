@@ -13,12 +13,13 @@ const Layout = () => {
     useEffect(() => {
         const getPosts = async () => {
             const resultPosts = await axios.get('https://jsonplaceholder.typicode.com/posts') 
-            setPosts(resultPosts.data) //obtein every data posts and set in the state
+            setPosts(resultPosts.data) //obtains every data posts and set in the state
             console.log(resultPosts)
         }
         getPosts()
 
     }, [])
+            
 
     return (
         <>
