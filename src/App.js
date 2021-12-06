@@ -1,12 +1,9 @@
-import Layout from "./components/layout/Layout";
-import Routes from './config/Routes'
-
+import Home from "./views/home/Home";
 
 function App() {
   return (
     <>
-      <Routes/>
-      <Layout />
+ 
     </>
   );
 }
