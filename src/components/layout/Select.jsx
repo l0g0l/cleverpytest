@@ -2,12 +2,11 @@
 const Select = ({ setuserfilter, datausers }) => {
 
     const handleChange = (event) => {
-        console.log(event)
 
         setuserfilter(event.target.value)
     }
 
-
+    //doing this .map of datausers show in the echa option  the name of de user
     return (
         <div>
             <select name="users" id="users" onChange={handleChange}>

@@ -43,7 +43,6 @@ const Layout = () => {
                         return <Card dataposts={item} key={item.id} datausers={users} />
                     }))
                     :
-                    
                     posts.filter(post => post.userId == userFilter)
                         .map((item => { return <Card dataposts={item} key={item.id} datausers={users} /> }))
                 }
