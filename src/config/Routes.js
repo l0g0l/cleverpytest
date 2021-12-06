@@ -1,7 +1,6 @@
 //New Update of Swich, now is Routes
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../views/home/Home';
-import Layout from '../components/layout/Layout';
 import Login from '../views/login/Login';
 import SignUp from '../views/signUp/SignUp';
 
