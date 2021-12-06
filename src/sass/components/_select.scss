@@ -1,0 +1,16 @@
+.container-label {
+    margin-bottom: 2em;
+    & .label-txt {
+        text-align: center;
+    }
+}
+.select {
+ text-align: center;
+}
+select  {
+    height: 2rem;
+    margin-bottom: 1.5em;
+    & option {
+        text-align: center;
+    }
+}

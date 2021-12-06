@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Header from "./header/Header"
-import NavBar from "./navbar/NavBar"
 import Footer from "./footer/Footer"
 import Card from '../../components/Card'
 import Select from './Select'
@@ -24,8 +23,8 @@ const Layout = () => {
             setUsers(resultUsers.data) //obtains every data users and set in the state
             console.log(resultUsers)
         }
-        getPosts()
         getUsers()
+        getPosts()
 
     }, [])
 
@@ -33,18 +32,17 @@ const Layout = () => {
     return (
         <>
             <Header />
-            <NavBar />
             <main>
                 <Select userfilter={userFilter} setuserfilter={setUserFilter} datausers={users} />
                 {/*posts it's an array, I iterate it and I paint as many cards as there are posts */}
                 {userFilter == "All"
                     ?
                     posts.map((item => {
-                        return <Card dataposts={item} key={item.id} datausers={users} />
+                        return <Card dataposts={item} key={item.id} posts={posts} datausers={users} />
                     }))
                     :
                     posts.filter(post => post.userId == userFilter)
-                        .map((item => { return <Card dataposts={item} key={item.id} datausers={users} /> }))
+                        .map((item => { return <Card dataposts={item} posts={posts} key={item.id} datausers={users} /> }))
                 }
             </main>
             <Footer />

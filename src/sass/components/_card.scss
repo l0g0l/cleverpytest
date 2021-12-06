@@ -1,8 +1,17 @@
 .container-card {
-    display: flex;
-    border: .5px solid rgb(168, 167, 167);
-    margin-bottom: 20px;    
+  display: flex;
+  border: 0.5px solid rgb(168, 167, 167);
+  margin-bottom: 20px;
 }
 .content-card {
-   padding: 20px;
+  padding: 20px;
+}
+.container-icon {
+  display: flex;
+  justify-content: right;
+  padding-top: 10px;
+
+  & .garbage-icon {
+    width: 10%;
+  }
 }
