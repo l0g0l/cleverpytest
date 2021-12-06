@@ -1,0 +1,16 @@
+.container-card {
+    display: flex;
+    border: .5px solid rgb(168, 167, 167);
+    margin-bottom: 20px;
+       
+    & .aside {
+        width: 80px;
+        border-right: .5px solid white;
+        background-color: #be93e5;
+    }
+    & .content-card {
+       padding: 20px;
+    }
+    
+
+}
