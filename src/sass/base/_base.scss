@@ -1,0 +1,81 @@
+//=========== Generics ==============
+body {
+  background-color: $black;
+  color: $white;
+  font-family: $mainfont;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: blue;
+  &:hover {
+    color: pink;
+    text-decoration: none;
+  }
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none !important;
+  outline: none !important;
+}
+
+//=========== Scroll to top animación ==============
+.container-arrow {
+  position: absolute;
+  top: 540px;
+  right: 50px;
+  @include for-size(phone) {
+  display: none;
+}
+}
+.arrow:before {
+  position: absolute;
+}
+#btnarrowtotop {
+  background-color: transparent !important;
+  position: fixed;
+  .arrow {
+    width: 25px;
+    height: 25px;
+    margin: -20px 0 0 -20px;
+    -webkit-transform: rotate(-45deg);
+    border-left: none;
+    border-right: 2px #fff solid;
+    border-top: 2px #fff solid;
+    cursor: pointer;
+    &button {
+      background-color: transparent;
+    }
+  }
+  .arrow:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 9px;
+    right: 9px;
+    margin: 0;
+    -webkit-transform: rotate(-90deg);
+    border-left: none;
+    border-top: none;
+    border-right: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-name: arrow;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0 -10px);
+    }
+  }
+}

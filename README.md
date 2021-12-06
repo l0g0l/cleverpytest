@@ -1,70 +1,166 @@
-# Getting Started with Create React App
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+<h4 align="center">Cleverpy Technical Test</h4>
+  <p align="center">
+    <a href="https://githubrepositoryfinder.herokuapp.com/">View Web Application</a>
+  </p>
+  <p align="center">
+<img src="https://www.codefactor.io/repository/github/l0g0l/buscadorrepos_frontend/badge" alt="Codefactor Grade">
+</p>
+<p align="center">
+<img src="https://sonarcloud.io/api/project_badges/measure?project=l0g0l_buscadorRepos_FrontEnd&metric=alert_status" alt="Sonar Quality Gate"></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<img src="public/images/accesibilityTest.png" alt="Accesibility test" width="400"></p>
+</p>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#learn-more">Learn More</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#app-overview">App Overview</a></li>
+    <li><a href="#languages-and-tools">Languages and Tools</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-In the project directory, you can run:
+## Learn more
 
-### `npm start`
+To be more familiar with the libraries and frameworks I have mainly used I will leave a short explanation here:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### [React-router](https://reactrouter.com/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+npm i react-router-dom
 
-### `npm test`
+React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering--so take your pick!  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### [Sass](https://sass-lang.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+npm i sass
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Sass is a CSS preprocessor, which adds special features such as variables, nested rules and mixins (sometimes referred to as syntactic sugar) into regular CSS. The aim is to make the coding process simpler and more efficient.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### [React-validation](https://www.npmjs.com/package/react-validation)
 
-### `npm run eject`
+npm i react-validation
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Component to provide simple form validation for React components. It uses the Controlled Components approach for validation.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+It is not easy to validate forms with React. The reason is a one-way data flow style. In this case we can't affect forms from the inputs in an easy way. React-validation provides several components which are 'connected' to the form via the input's method attached by the Form component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### [Validator](https://www.npmjs.com/package/validator)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+npm i validator
 
-## Learn More
+This library validates and sanitizes strings only.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If you're not sure if your input is a string, coerce it using input + ''. Passing anything other than a string will result in an error.  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
 
-### Code Splitting
+- [Node](https://nodejs.org/en/): 10.16.0 or more  
+- [React js](https://es.reactjs.org/)
+- Clone the repository on your local machine (https://github.com/l0g0l/buscadorRepos_FrontEnd.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Installation
 
-### Analyzing the Bundle Size
+###### Frontend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```sh
+`cd buscadorRepos_FrontEnd` go into the folder
+```
 
-### Making a Progressive Web App
+Install dependecies and devDependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```sh
+npm i
+```
 
-### Advanced Configuration
+Enter the following command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+npm start
+```
 
-### Deployment
+<!-- ABOUT THE PROJECT -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## About The Project
 
-### `npm run build` fails to minify
+Creation of a GitHub repository finder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Requirements  
+
+-Develop the front end of the app with React.  
+
+-The application must be SPA (single page application), so that there is no page reloading at any time, and only the minimum necessary content is loaded and rendered with each endpoint change.  
+
+-Save log data in the localstorage.  
+
+-Version control management with GiT.
+
+
+
+
+<!-- APP OVERVIEW -->
+
+## App Overview  
+
+<img src="" alt="view complete aplication " >
+
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<br>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Languages and Tools:
+
+
+The project is deployed in [Heroku](https://www.heroku.com/)  
+<br>
+
+<p align="left">
+    <a href="https://sass-lang.com/" target="_blank"> 
+        <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="SASS" width="40" height="40"/>
+    </a> 
+    <a href="https://www.w3schools.com/css/" target="_blank"> 
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
+    </a> 
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+    </a>
+    <a href="https://www.mongodb.com/" target="_blank"> 
+    <a href="https://reactjs.org/" target="_blank">
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>
+    </a>  
+    <a href="https://git-scm.com/" target="_blank">
+        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+    </a>
+       <a href="https://www.heroku.com/home" target="_blank">
+        <img src="https://www.nicepng.com/png/full/223-2233246_heroku-logo-salesforce-heroku.png" alt="heroku" width="40" height="40"/>
+    </a>
+    
+</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Lucía González
+
+[<img src="https://github.com/l0g0l/hackathonmwc/raw/main/src/images/GitHub.png" width=45px heigth=45px>](https://github.com/l0g0l)
+
+[<img src="https://github.com/l0g0l/hackathonmwc/raw/main/src/images/linkedin.png"  width=40px heigth=40px>](https://www.linkedin.com/in/luciagonzalezlara)

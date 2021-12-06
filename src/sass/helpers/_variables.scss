@@ -1,0 +1,28 @@
+//=========== Fonts ==============
+
+@font-face {
+    font-family: 'ubuntu';
+    src:  url('../../assets/fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
+    font-style: normal;
+    unicode-range: "U+0-10FFFF";
+}
+
+$mainfont: ubuntu,"Courier New", monospace, sans-serif;
+
+$fontfooter:15px;
+
+
+//=========== Colors ==============
+
+/* HXD */
+$black: #000;
+$white: #ffff;
+
+
+
+//=========== Dimensions ==============
+$nav:75px;
+$footer: 50px;
+$margs: 27px;
+
+
