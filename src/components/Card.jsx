@@ -4,9 +4,9 @@ const Card = ({dataposts}) => {
     //show the card content using props
     return (
         <div className="container-card">
-            <div className="aside"></div>
+            {/* <div className="aside"></div> */}
             <div className="content-card">
-                <p>{dataposts.userId}</p>
+                <p>User: {dataposts.userId}</p>
                 <p>{dataposts.title}</p>
                 <p>{dataposts.body}</p>
             </div>
