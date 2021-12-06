@@ -40,17 +40,13 @@ const Layout = () => {
                 {userFilter == "All"
                     ?
                     posts.map((item => {
-                        return <Card dataposts={item} key={item.id} datausers={users}/>
+                        return <Card dataposts={item} key={item.id} datausers={users} />
                     }))
                     :
-
+                    
                     posts.filter(post => post.userId == userFilter)
-                        .map((item => { return <Card dataposts={item} key={item.id} datausers={users}/> }))
-
+                        .map((item => { return <Card dataposts={item} key={item.id} datausers={users} /> }))
                 }
-
-
-
             </main>
             <Footer />
         </>

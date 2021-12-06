@@ -1,8 +1,7 @@
 import React from 'react'
 
 const Card = ({dataposts, datausers}) => {
-    console.log(datausers);
-      //show the card content using props
+    //show the card and users content using props
 
 
     return (

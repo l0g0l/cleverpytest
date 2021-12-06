@@ -1,5 +1,5 @@
 
-const Select = ({setuserfilter, datausers}) => {
+const Select = ({ setuserfilter, datausers }) => {
 
     const handleChange = (event) => {
         console.log(event)
@@ -12,11 +12,11 @@ const Select = ({setuserfilter, datausers}) => {
         <div>
             <select name="users" id="users" onChange={handleChange}>
                 <option value="all">All</option>
-             {datausers.map((item => {
-                 return(
-                     <option value={item.id} key={item.id}>{item.name}</option>
-                 )
-             }))}
+                {datausers.map((item => {
+                    return (
+                        <option value={item.id} key={item.id}>{item.name}</option>
+                    )
+                }))}
             </select>
         </div>
     )
