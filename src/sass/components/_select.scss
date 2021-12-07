@@ -8,19 +8,18 @@
 }
 .select {
  text-align: center;
+ 
 }
 select  {
     height: 2rem;
     width: 12rem;
     margin-bottom: 1.5em;
-    cursor: pointer;
-   
+    cursor: pointer; 
+    background-color: $select;
+    border-radius: .4em;
 }
 option {
     text-align: center;
-}
-select option[value="All"] {
-     background-color: $optionAll !important ;
 }
 select option[value="1"] {
    color: $option1;

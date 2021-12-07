@@ -18,13 +18,7 @@ const ScrollToTop = () => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 0) {
         setIsVisible(true);
-        // if (window.pageYOffset < 700) {
-        //   setIsVisible(true);
-        // }
-        // else {
-        //   setIsVisible(false)
-        // }
-      }
+        }
       else {
         setIsVisible(false)
       }

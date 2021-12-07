@@ -1,17 +1,38 @@
 .container-card {
   display: flex;
-  border: 0.5px solid rgb(168, 167, 167);
-  margin-bottom: 20px;
+  // border: 0.5px solid #8b8a8a;
+  margin-bottom: 1.5em;
+  border-radius: 0.6em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .content-card {
-  padding: 20px;
+  padding: 1em;
+}
+.content-card ::first-letter {
+  text-transform:uppercase;
+}
+.user-card {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+.title-card {
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+  font-weight: 600;
+}
+.body-card {
+  font-size: 1em;
+  word-spacing: 1px;
 }
 .container-icon {
   display: flex;
   justify-content: right;
-  padding-top: 10px;
-
+  padding-top: .5em;
   & .garbage-icon {
     width: 10%;
   }
 }
+
+// .title-card {
+//   @include colorTitle($option1)
+// }

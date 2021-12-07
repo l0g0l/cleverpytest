@@ -15,12 +15,12 @@ const Card = ({ dataposts, datausers, posts }) => {
     return (
         <div className="container-card">
             <div className="content-card">
-                <p>{datausers.filter(user => user.id === dataposts.userId)[0].name}</p>
-                <p>{dataposts.title}</p>
-                <p>{dataposts.body}</p>
-                <button className="container-icon" onClick={removePost} > 
+                <p className="user-card">{datausers.filter(user => user.id === dataposts.userId)[0].name}</p>
+                <p className="title-card" >{dataposts.title}</p>
+                <p className="body-card">{dataposts.body}</p>
+                <div className="container-icon" onClick={removePost}  aria-label="Click"> 
                     <img src={papeN} alt="garbage icon" className="garbage-icon" />
-                </button>
+                </div>
             </div>
         </div>
     )
