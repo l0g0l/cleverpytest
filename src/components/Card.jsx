@@ -6,8 +6,8 @@ const Card = ({ dataposts, datausers, posts }) => {
     // console.log(dataposts);
     //show the card and users content using props
 
-    const removePost = () => {
-        return posts.filter(item => item.id !== dataposts.id);
+    const removePost = (event) => {
+         posts.filter(item => item.id !== event.target.value);
     }
 
 
@@ -15,10 +15,10 @@ const Card = ({ dataposts, datausers, posts }) => {
     return (
         <div className="container-card">
             <div className="content-card">
-                <p>{datausers.filter(user => user.id == dataposts.userId)[0].name}</p>
+                <p>{datausers.filter(user => user.id === dataposts.userId)[0].name}</p>
                 <p>{dataposts.title}</p>
                 <p>{dataposts.body}</p>
-                <button className="container-icon" onClick={() => removePost()} > 
+                <button className="container-icon" onClick={removePost} > 
                     <img src={papeN} alt="garbage icon" className="garbage-icon" />
                 </button>
             </div>

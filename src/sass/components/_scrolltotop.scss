@@ -1,0 +1,24 @@
+.container-scroll {
+  position: absolute;
+  top: 495px;
+  right: 42px;
+  background-color: transparent !important;
+}
+
+#arrowfixed {
+  background-color: transparent !important;
+  position: fixed;
+  .scrollup {
+    width: 50%;
+    animation-name: arrow;
+  }
+  @keyframes arrow {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translate(0 -10px);
+    }
+  }
+}

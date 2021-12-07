@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react"
+import flN from '../assets/flN.png'
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -16,14 +16,14 @@ const ScrollToTop = () => {
   useEffect(() => {
     // El icono aparece cuando ha sobrepasado los 50px de altura y desapare cuando sobrepasa los 900
     const toggleVisibility = () => {
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 0) {
         setIsVisible(true);
-        if (window.pageYOffset < 1050) {
-          setIsVisible(true);
-        }
-        else {
-          setIsVisible(false)
-        }
+        // if (window.pageYOffset < 700) {
+        //   setIsVisible(true);
+        // }
+        // else {
+        //   setIsVisible(false)
+        // }
       }
       else {
         setIsVisible(false)
@@ -34,12 +34,12 @@ const ScrollToTop = () => {
   }, []);
 
   return (
-    <div aria-label="Click" className="container-arrow">
+    <div className="container-scroll" aria-label="Click">
       {
         isVisible &&
-        <button aria-label="Up to Top" onClick={scrollToTop} id="btnarrowtotop">
-          <div className="arrow" ></div>
-        </button>
+        <div aria-label="Up to Top" onClick={scrollToTop} id="arrowfixed">
+          <img src={flN} className="scrollup" alt="scrollup icon"/>
+        </div>
       }
 
     </div>

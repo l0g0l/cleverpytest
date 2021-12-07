@@ -4,6 +4,7 @@ import Header from "./header/Header"
 import Footer from "./footer/Footer"
 import Card from '../../components/Card'
 import Select from './Select'
+import ScrollToTop from '../ScrollToTop'
 
 
 
@@ -33,6 +34,7 @@ const Layout = () => {
         <>
             <Header />
             <main>
+                <ScrollToTop/>
                 <Select userfilter={userFilter} setuserfilter={setUserFilter} datausers={users} />
                 {/*posts it's an array, I iterate it and I paint as many cards as there are posts */}
                 {userFilter == "All"

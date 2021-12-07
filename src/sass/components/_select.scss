@@ -1,7 +1,9 @@
 .container-label {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-size: 1.5rem;
     & .label-txt {
-        text-align: center;
+        margin-bottom: 0.5em;
     }
 }
 .select {
@@ -9,8 +11,44 @@
 }
 select  {
     height: 2rem;
+    width: 12rem;
     margin-bottom: 1.5em;
-    & option {
-        text-align: center;
-    }
+    cursor: pointer;
+   
+}
+option {
+    text-align: center;
+}
+select option[value="All"] {
+     background-color: $optionAll !important ;
+}
+select option[value="1"] {
+   color: $option1;
+}
+select option[value="2"] {
+    color: $option2;
+}
+select option[value="3"] {
+    color: $option3;
+}
+select option[value="4"] {
+    color: $option4;
+}
+select option[value="5"] {
+   color:$option5;
+}
+select option[value="6"] {
+    color: $option6;
+}
+select option[value="7"] {
+   color: $option7;
+}
+select option[value="8"] {
+    color: $option8;
+}
+select option[value="9"] {
+    color: $option9;
+}
+select option[value="10"] {
+    color:$option10;
 }

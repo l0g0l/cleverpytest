@@ -1,97 +1,37 @@
 //=========== Fonts ==============
 
 @font-face {
-    font-family: 'ubuntu';
-    src:  url('../../assets/fonts/Ubuntu/Ubuntu-Light.ttf') format('truetype');
-    font-style: normal;
-    unicode-range: "U+0-10FFFF";
+  font-family: "ubuntu";
+  src: url("../../assets/fonts/Ubuntu/Ubuntu-Light.ttf") format("truetype");
+  font-style: normal;
+  unicode-range: "U+0-10FFFF";
 }
 
-$mainfont: ubuntu,"Courier New", monospace, sans-serif;
-$fontfooter:15px;
-
+$mainfont: ubuntu, "Courier New", monospace, sans-serif;
+$fontfooter: 15px;
 
 //=========== Colors ==============
 
 /* HXD */
-$black: #ccc;
-$white: #111;
-.uno {
-    width: 30px;
-    height: 30px;
-    background-color: #be93e5;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.dos {
-    width: 30px;
-    height: 30px;
-    background-color: #E7CBA9;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.tres {
-    width: 30px;
-    height: 30px;
-    background-color: #07f7bb;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.cuatro {
-    width: 30px;
-    height: 30px;
-    background-color: #f7d155;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.cinco {
-    width: 30px;
-    height: 30px;
-    background-color: #8DA47E;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.seis {
-    width: 30px;
-    height: 30px;
-    background-color: #218B82;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.siete {
-    width: 30px;
-    height: 30px;
-    background-color: #eb9b5b;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.ocho {
-    width: 30px;
-    height: 30px;
-    background-color: #bcce58;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.nueve {
-    width: 30px;
-    height: 30px;
-    background-color: #98D4BB;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
-.diez {
-    width: 30px;
-    height: 30px;
-    background-color: #f57290;
-    margin-bottom: 20px;
-    margin: 10px 50%;
-}
+$grey-background: #ccc;
+$darkgrey-color: #111;
+$link-hover: #ef0066;
+$link: #000;
 
-
+//============ Options ==============
+$optionAll: #ffff;
+$option1: #be93e5;
+$option2: #e7cba9;
+$option3: #07f7bb;
+$option4: #f7d155;
+$option5: #8da47e;
+$option6: #218b82;
+$option7: #eb9b5b;
+$option8: #bcce58;
+$option9: #98d4bb;
+$option10: #f57290;
 
 //=========== Dimensions ==============
-$nav:75px;
+$nav: 75px;
 $footer: 50px;
 $margs: 27px;
-
-
