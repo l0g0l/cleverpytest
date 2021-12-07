@@ -5,6 +5,7 @@ import Footer from "./footer/Footer"
 import Card from '../../components/Card'
 import Select from './Select'
 import ScrollToTop from '../ScrollToTop'
+import Pagination from '../pagination/Pagination'
 
 
 
@@ -46,6 +47,7 @@ const Layout = () => {
                     posts.filter(post => post.userId == userFilter)
                         .map((item => { return <Card dataposts={item} posts={posts} key={item.id} datausers={users} /> }))
                 }
+                <Pagination posts={posts} />
             </main>
             <Footer />
         </>

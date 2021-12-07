@@ -21,7 +21,7 @@ const Items = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
         ))}
      
       </ul>
-        {/* <p className='text-muted credit'>Page {currentPage} of {totalPages}</p>  */}
+        <p className='text-muted credit'>Page {currentPage} of {totalPages}</p> 
        
     </div>
   );
