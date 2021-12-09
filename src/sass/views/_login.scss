@@ -12,8 +12,19 @@
 .welcome {
     text-align: center;
     margin-bottom: 2em;
-    color:$link-hover
+    color:$link-hover;
+    -moz-animation: welcome 2s ease-out;
+    -webkit-animation: welcome 2s ease-out;
+    animation: welcome 2s ease-out;
 }
+@keyframes welcome {
+    from {
+      transform: translatey(-900%); /*el texto se va fuera de arriba a abajo*/
+    }
+    to {
+      transform: translateY(0%); /*vuelve al punto original*/
+    }
+  }
 .formdiv {
     margin-bottom: 1em;
 }

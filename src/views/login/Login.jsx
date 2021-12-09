@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { Link, useNavigate} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
@@ -14,7 +14,7 @@ const required = (value) => {
     if (!value) {
         return (
             <div className="alert" role="alert">
-               Required Field
+                Required Field
             </div>
         );
     }
@@ -46,10 +46,10 @@ const Login = (props) => {
         setPassword(password);
     };
 
-    
+
     const handleLogin = (e) => {
         e.preventDefault();
-     
+
 
         setMessage("");
         setLoading(true);
@@ -84,59 +84,61 @@ const Login = (props) => {
         <div className="container-login">
             <div className="header">
                 <header>
-                   <Header/>
+                    <Header />
                 </header>
             </div>
-                  <span className="welcome">Welcome!!</span> 
+            <div lassName="container-welcome">
+                <p className="welcome">Welcome!!</p>
+            </div>
             <main className="form">
                 <Form onSubmit={handleLogin} ref={form}>
-                        <div className="formdiv">
-                            <label htmlFor="email">Email</label>
-                            <Input
-                                type="text"
-                                className="input"
-                                id="email"
-                                value={email}
-                                onChange={onChangeEmail}
-                                validations={[required]}
-                                aria-describedby="email"
-                                title="email"
-                                />
-                        </div>
-                        <div className="formdiv">
-                            <label htmlFor="password">Password</label>
-                            <Input
-                                type="password"
-                                className="input"
-                                id="password"
-                                value={password}
-                                onChange={onChangePassword}
-                                validations={[required]}
-                                aria-describedby="password"
-                                title="password"
-                            />
-                        </div>
-                      
-                            <button className="btn-login" >
-                                <span>Login</span>
-                            </button>
-                     
+                    <div className="formdiv">
+                        <label htmlFor="email">Email</label>
+                        <Input
+                            type="text"
+                            className="input"
+                            id="email"
+                            value={email}
+                            onChange={onChangeEmail}
+                            validations={[required]}
+                            aria-describedby="email"
+                            title="email"
+                        />
+                    </div>
+                    <div className="formdiv">
+                        <label htmlFor="password">Password</label>
+                        <Input
+                            type="password"
+                            className="input"
+                            id="password"
+                            value={password}
+                            onChange={onChangePassword}
+                            validations={[required]}
+                            aria-describedby="password"
+                            title="password"
+                        />
+                    </div>
 
-                        {message && (
-                            <div >
-                                <div className="alert " role="alert">
-                                    {message}
-                                </div>
+                    <button className="btn-login" >
+                        <span>Login</span>
+                    </button>
+
+
+                    {message && (
+                        <div >
+                            <div className="alert " role="alert">
+                                {message}
                             </div>
-                        )}
-                        <CheckButton style={{ display: "none" }} ref={checkBtn} />
-                    </Form>
+                        </div>
+                    )}
+                    <CheckButton style={{ display: "none" }} ref={checkBtn} />
+                </Form>
             </main>
-                
 
-                <div >
-                    <p className="account-msg">Still no account? <Link to="/signup"><strong>Sign Up</strong></Link></p>
-                </div>
+
+            <div >
+                <p className="account-msg">Still no account? <Link to="/signup"><strong>Sign Up</strong></Link></p>
+            </div>
         </div>
     )
 }

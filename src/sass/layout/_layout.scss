@@ -3,14 +3,14 @@
   justify-content: center;
 }
 .container-cards {
-  @include for-size(tablet) {
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    grid-column-gap: 20px;
-  }
   @include for-size(desktop-only) {
-    display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    grid-column-gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.cards {
+  @include for-size(desktop-only) {
+    width: 48%;
+    margin: 10px;
   }
 }

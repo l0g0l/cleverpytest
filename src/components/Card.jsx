@@ -32,7 +32,7 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                         <h1 className="user-card" style={{ color: datausers.color }}>{datausers.name}</h1>
                     </div>
 
-                    <img src={infoC} alt="icon extra info profile" className="icon-info" onClick={toggleShowProfile} />
+                    <img aria-label="Click" src={infoC} alt="icon extra info profile" className="icon-info" onClick={toggleShowProfile} />
 
                 </div>
                 {showProfile
@@ -51,7 +51,7 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                 }
                 <h3 className="title-card">{dataposts.title}</h3>
                 <p className="body-card">{dataposts.body}</p>
-                <div className="containericon-btns">
+                <div className="containericon-btns" aria-label="Click">
                     {
                         islogged
                             ?

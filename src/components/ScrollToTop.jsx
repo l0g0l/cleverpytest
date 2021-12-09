@@ -31,7 +31,7 @@ const ScrollToTop = () => {
     <div className="container-scroll" aria-label="Click">
       {
         isVisible &&
-        <div aria-label="Up to Top" onClick={scrollToTop} id="arrowfixed">
+        <div aria-label="Up to Top" onClick={scrollToTop} id="arrowfixed" >
           <img src={flN} className="scrollup" alt="scrollup icon"/>
         </div>
       }

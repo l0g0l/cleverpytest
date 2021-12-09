@@ -113,9 +113,6 @@ const Layout = () => {
                 }
                 {/*posts it's an array, I iterate it and I paint as many cards as there are posts. */}
                 <div className="container-cards">
-
-
-
                     {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
                         ?
                         userFilter == "All"
@@ -125,9 +122,15 @@ const Layout = () => {
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.id)
 
                                 return (
-                                    <>
-                                        <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
-                                    </>
+                                    <div className="cards">
+                                        <Card 
+                                            dataposts={item} 
+                                            key={item.id} 
+                                            delete_post={deletePost} 
+                                            datausers={user} 
+                                            datacomments={comments} 
+                                            islogged={login_redux.is_logged} />
+                                    </div>
                                 )
                             }))
                             :
@@ -136,7 +139,15 @@ const Layout = () => {
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)
 
                                 return (
-                                    <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
+                                    <div className="cards">
+                                        <Card 
+                                            dataposts={item} 
+                                            delete_post={deletePost} 
+                                            key={item.id} 
+                                            datausers={user} 
+                                            datacomments={comments} 
+                                            islogged={login_redux.is_logged} />
+                                    </div>
                                 )
                             }))
                         :
