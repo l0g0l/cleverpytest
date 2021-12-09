@@ -1,8 +1,10 @@
 import papeN from '../assets/papeN.png'
 import { useState } from 'react'
 import infoC from '../assets/infoC.png'
+
+
+
 const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => {
-    // console.log(datacomments)
     //show the card and users content using props
 
     const [showProfile, setShowProfile] = useState(false)
@@ -27,20 +29,23 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                         <h1 className="user-card" style={{ color: datausers.color }}>{datausers.name}</h1>
                     </div>
 
-                    <img src={infoC} alt="icon extra info profile" className="icon-info" />
+                    <img src={infoC} alt="icon extra info profile" className="icon-info" onClick={toggleShowProfile} />
 
-                    {showProfile
-                        ?
-                        <>
-                            <div>Email: {datausers.email}</div>
-                            <div>Phone: {datausers.phone}</div>
-                            <div>URL:   {datausers.website}</div>
-                        </>
-
-                        :
-                        null
-                    }
                 </div>
+                {showProfile
+                    ?
+                    <>
+                        <div className="profile">
+                            <p><strong>Email: </strong>{datausers.email}</p>
+                            <p><strong>Phone:</strong> {datausers.phone}</p>
+                            <p><strong>URL:</strong>   {datausers.website}</p>
+
+                        </div>
+                    </>
+
+                    :
+                    null
+                }
                 <h3 className="title-card">{dataposts.title}</h3>
                 <p className="body-card">{dataposts.body}</p>
                 <div className="containericon-btns">
@@ -56,18 +61,16 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                             Comments
                         </button>
                     </div>
-                    <div >
-                        <button onClick={toggleShowProfile} style={{ color: datausers.color }} className="btn">
-                            View Profile
-                        </button>
-                    </div>
+
                 </div>
 
                 {showComments
                     ?
                     <>
-                        <div>{datacomments.name}</div>
-                        <div>{datacomments.body}</div>
+                        <div className="comments">
+                            <h5>{datacomments.name}</h5>
+                            <p>{datacomments.body}</p>
+                        </div>
                     </>
 
                     :

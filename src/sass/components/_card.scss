@@ -1,24 +1,32 @@
 .container-card {
   display: flex;
   margin-bottom: 1.5em;
-  border-radius: .6em;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 0.6em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .content-card {
   padding: 1em;
 }
 .container-icon-name {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .icon-info {
-  width: 10%;
+  width: 8%;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  line-height: 1.5em;
 }
 h1 {
   margin-top: 0 !important;
 }
 .content-card ::first-letter {
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 .user-card {
   font-size: 2em;
@@ -26,7 +34,7 @@ h1 {
 }
 .title-card {
   font-size: 1.1em;
-  margin-bottom: .3em;
+  margin-bottom: .5em;
   font-weight: 600;
 }
 .body-card {
@@ -35,16 +43,24 @@ h1 {
   margin-bottom: .5em;
 }
 .garbage-icon {
-    width: 12%;
- }
+  width: 12%;
+}
 .containericon-btns {
-display: flex;
-flex-direction: row-reverse;
-align-items: baseline;
-justify-content: space-between;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .btn {
   background-color: transparent;
   font-weight: bold;
 }
-
+.comments {
+  margin-top: .5em;
+  & h5 {
+    margin-bottom: .5em;
+  }
+  & p {
+    font-size: .8rem;
+  }
+}

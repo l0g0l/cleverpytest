@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removePost } from '../../store/posts'
 
 
+
 const Layout = () => {
     const posts_redux = useSelector(state => state.posts); //traerte lo que contenga el store de los posts (posts y posts_loaded)
     console.log(posts_redux)
@@ -98,7 +99,10 @@ const Layout = () => {
 
     return (
         <>
-            <Header />
+            <header>
+                <Header />
+            </header>
+        
             <main>
                 <ScrollToTop />
                 {users_redux.users_loaded
@@ -106,7 +110,7 @@ const Layout = () => {
                     <Select userfilter={userFilter} setuserfilter={setUserFilter} datausers={users_redux.users} />
                     :
                     <div>Loading users</div>
-                }                
+                }
                 {/*posts it's an array, I iterate it and I paint as many cards as there are posts. */}
 
                 {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
@@ -119,7 +123,7 @@ const Layout = () => {
 
                             return (
                                 <>
-                                    <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged}/>
+                                    <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
                                 </>
                             )
                         }))
@@ -129,14 +133,14 @@ const Layout = () => {
                             const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)[0]
 
                             return (
-                                <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged}/>
+                                <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
                             )
                         }))
                     :
                     <div>Loading</div>
-                    
+
                 }
-                    
+
             </main>
             <Footer />
         </>
