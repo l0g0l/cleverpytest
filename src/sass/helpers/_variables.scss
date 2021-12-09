@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "ubuntu";
-  src: url("../../assets/fonts/Ubuntu/Ubuntu-Light.ttf") format("truetype");
+  src: url("../../assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
   font-style: normal;
   unicode-range: "U+0-10FFFF";
 }
@@ -17,22 +17,21 @@ $grey-background: #ccc;
 $darkgrey-color: #111;
 $link-hover: #ef0066;
 $link: #000;
+$alert: #db3e3e;
+$success: #04a104;
+
 
 //============ Options ==============
 $select: #fff;
 $optionAll: #ffff;
-$option1: #9873bb;
-$option2: #ad916f;
-$option3: #07f7bb;
-$option4: #e9bb23;
-$option5: #647a55;
-$option6: #218b82;
+$option1: #6f4794;
+$option2: #91724d;
+$option3: #91a80c;
+$option4: #967403;
+$option5: #3b6422;
+$option6: #389c94;
 $option7: #c27b41;
-$option8: #91a80c;
-$option9: #222524;
+$option8: #4543c5;
+$option9: #3a3d3c;
 $option10: #b32f4e;
 
-//=========== Dimensions ==============
-$nav: 75px;
-$footer: 50px;
-$margs: 27px;

@@ -4,6 +4,8 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import validator from 'validator';
+import Header from "../../components/layout/header/Header";
+
 
 
 const crypto = require('crypto');
@@ -11,7 +13,7 @@ const crypto = require('crypto');
 const required = (value) => {
     if(!value.toString().trim().length) {
         return (
-            <div className="alert alert-danger" role="alert">
+            <div className="alert" role="alert">
                 Required Field
             </div>
         );
@@ -21,7 +23,7 @@ const required = (value) => {
 const validEmail = (value) => {
     if  (!validator.isEmail(value)) {
         return (
-            <div className="alert alert-danger" role="alert">
+            <div className="alert " role="alert">
                Invalid Email
             </div>
         );
@@ -31,7 +33,7 @@ const validEmail = (value) => {
 const vusername = (value) => {
     if (!value) {
         return (
-            <div className="alert alert-danger" role="alert">
+            <div className="alert " role="alert">
                 Please, completed your Username
             </div>
         );
@@ -41,8 +43,8 @@ const vusername = (value) => {
 const vpassword = (value) => {
     if ((value.length < 6 || value.length > 10) ) {
         return (
-            <div className="alert alert-danger" role="alert">
-                Entre 6 y 10 caracteres. Debe contener al menos un número, mayúscula, minúscula y carácter especial
+            <div className="alert " role="alert">
+                Must be between 6 and 10 characters
             </div>
         );
     }
@@ -83,22 +85,27 @@ const Register = () => {
 
         if (checkBtn.current.context._errors.length === 0) {
             if (localStorage.getItem("email") === email) {
-                setMessage('Usuario ya registrado')
+                setMessage('Registered user')
                 setSuccessful(false)
             } else {
                 localStorage.setItem("username", `${username}`)
                 localStorage.setItem("email", `${email}`)
                 localStorage.setItem("password", crypto.createHash('sha256').update(password).digest('base64'))
 
-                setMessage('Usuario creado correctamente')
+                setMessage('User successfully registered')
                 setSuccessful(true)
             }
         }
     };
 
     return (
-        <div className="container">
-            <main className="formdiv-signup">
+        <div className="container-signup">
+                <div className="header">
+                <header>
+                   <Header/>
+                </header>
+            </div>
+            <main className="form">
 
                 <Form onSubmit={handleRegister} ref={form}>
                     {!successful && (
@@ -107,8 +114,7 @@ const Register = () => {
                                 <label htmlFor="username">Username</label>
                                 <Input
                                     type="text"
-                                    className="formdiv-input"
-                                    id="username"
+                                    className="input"                                    id="username"
                                     value={username}
                                     onChange={onChangeUsername}
                                     validations={[required, vusername]}
@@ -120,8 +126,7 @@ const Register = () => {
                                 <label htmlFor="email">Email</label>
                                 <Input
                                     type="text"
-                                    className="formdiv-input"
-                                    id="email"
+                                    className="input"                                    id="email"
                                     value={email}
                                     onChange={onChangeEmail}
                                     validations={[required, validEmail]}
@@ -133,8 +138,7 @@ const Register = () => {
                                 <label className="label" htmlFor="password">Password</label>
                                 <Input
                                     type="password"
-                                    className="formdiv-input"
-                                    id="password"
+                                    className="input"                                    id="password"
                                     value={password}
                                     onChange={onChangePassword}
                                     validations={[required, vpassword]}
@@ -142,15 +146,15 @@ const Register = () => {
                                     title="password"/>   
                             </div>
 
-                            <div className="formbtn">
-                                <button className="formbtn-btn"><span>Regístrate</span></button>
+                            <div >
+                                <button className="btn-signup"><span>Sign Up</span></button>
                             </div>
                         </div>
                     )}
                     {message && (
-                        <div className="error">
+                        <div >
                             <div 
-                                className={successful ? "alert alert-success" : "alert alert-danger"}
+                                className={successful ? "success" : "alert "}
                                 role="alert"
                             >
                                 {message}
@@ -160,7 +164,7 @@ const Register = () => {
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
                 <div>
-                    <p className="form-p">¿Ya tienes cuenta? <Link to='./'  >Inicia sesión</Link></p>
+                    <p className="form-p">Already created an account? <Link to='/'><strong>Log in</strong></Link></p>
 
                 </div>
 

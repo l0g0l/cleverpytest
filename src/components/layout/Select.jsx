@@ -19,7 +19,7 @@ const Select = ({ setuserfilter, datausers }) => {
                     <option value="All" className="option1">All</option>
                     {datausers.map((item => {
                         return (
-                            <option value={item.id} key={item.id}>{item.name}</option>
+                            <option style={{color: item.color}} value={item.id} key={item.id}>{item.name}</option>
                         )
                     }))}
                 </select>
