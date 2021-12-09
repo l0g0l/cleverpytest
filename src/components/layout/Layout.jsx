@@ -102,7 +102,7 @@ const Layout = () => {
             <header>
                 <Header />
             </header>
-        
+
             <main>
                 <ScrollToTop />
                 {users_redux.users_loaded
@@ -112,35 +112,38 @@ const Layout = () => {
                     <div>Loading users</div>
                 }
                 {/*posts it's an array, I iterate it and I paint as many cards as there are posts. */}
+                <div className="container-cards">
 
-                {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
-                    ?
-                    userFilter == "All"
+
+
+                    {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
                         ?
-                        posts_redux.posts.map((item => {
-                            const user = users_redux.users.filter(user => user.id === item.userId)[0]
-                            const comments = comments_redux.comments.filter(comment => comment.postId == item.id)[0]
+                        userFilter == "All"
+                            ?
+                            posts_redux.posts.map((item => {
+                                const user = users_redux.users.filter(user => user.id === item.userId)[0]
+                                const comments = comments_redux.comments.filter(comment => comment.postId == item.id)
 
-                            return (
-                                <>
-                                    <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
-                                </>
-                            )
-                        }))
+                                return (
+                                    <>
+                                        <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
+                                    </>
+                                )
+                            }))
+                            :
+                            posts_redux.posts.filter(post => post.userId == userFilter).map((item => {
+                                const user = users_redux.users.filter(user => user.id === item.userId)[0]
+                                const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)
+
+                                return (
+                                    <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
+                                )
+                            }))
                         :
-                        posts_redux.posts.filter(post => post.userId == userFilter).map((item => {
-                            const user = users_redux.users.filter(user => user.id === item.userId)[0]
-                            const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)[0]
+                        <div>Loading</div>
 
-                            return (
-                                <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged} />
-                            )
-                        }))
-                    :
-                    <div>Loading</div>
-
-                }
-
+                    }
+                </div>
             </main>
             <Footer />
         </>

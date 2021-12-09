@@ -2,8 +2,11 @@
     margin-bottom: 1.5em;
     text-align: center;
     font-size: .8rem;
-    & .label-txt {
+    & .label-txt1, .label-txt2 {
         margin-bottom: 1.5em;
+        @include for-size(tablet) {
+            font-size: 1.2rem;
+        }
     }
 }
 .link-login {
@@ -23,15 +26,26 @@ select  {
     cursor: pointer; 
     background-color: $select;
     border-radius: .4em;
+    @include for-size(desktop-only) {
+        width: 21rem;
+      }
 }
 option {
     text-align: center;
 }
+select option {
+    @include for-size(desktop-only) {
+        @include optionFontSize (1.2rem)
+      }
+ 
+ }
 select option[value="1"] {
    color: $option1;
+
 }
 select option[value="2"] {
     color: $option2;
+ 
 }
 select option[value="3"] {
     color: $option3;

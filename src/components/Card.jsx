@@ -5,10 +5,13 @@ import infoC from '../assets/infoC.png'
 
 
 const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => {
+    console.log(datacomments)
     //show the card and users content using props
 
     const [showProfile, setShowProfile] = useState(false)
     const [showComments, setShowComments] = useState(false)
+    let newComments = Object.values(datacomments)
+    // console.log(newComments)
 
 
     const toggleShowProfile = () => {
@@ -68,8 +71,17 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                     ?
                     <>
                         <div className="comments">
-                            <h5>{datacomments.name}</h5>
-                            <p>{datacomments.body}</p>
+                            <ul>
+                                {datacomments.map((item => {
+                                    return (
+                                    <li>
+                                        <h5>{item.name}</h5>
+                                        <p>{item.body}</p>
+                                    </li>
+                                    )
+                                
+                                }))}
+                            </ul>
                         </div>
                     </>
 

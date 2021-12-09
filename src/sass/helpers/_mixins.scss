@@ -1,5 +1,7 @@
 
-
+@mixin optionFontSize ($font) {
+  font-size: $font;
+}
 //=========== Breakpoints ==============
 @mixin for-size($size) {
   @if $size == xsphone {                                              // phone-xs
@@ -15,13 +17,13 @@
   } @else if $size == tablet-portait-only {                           // tablet-portait-only
     @media (min-width: 600px) and (max-width: 899px) { @content; } 
   } @else if $size == tablet {                                        // tablet-landscape-up
-    @media (max-width: 1000px) { @content; }
+    @media (min-width: 691px) { @content; }
   } @else if $size == tablet-landscape-only {                         // tablet-landscape-only
     @media (min-width: 900px) and (max-width: 1269px) { @content; } 
   } @else if $size == desktop-up {                                    // desktop-up
     @media (max-width: 1499px) { @content; }
   } @else if $size == desktop-only {                                  // desktop-only
-    @media (min-width: 1500px) and (max-width: 2000px) { @content; } 
+    @media (min-width: 1000px) and (max-width: 1400px) { @content; } 
   } @else if $size == big-desktop-up {                                // big-desktop-up
     @media (max-width: 1500px) { @content; }
   } @else if $size == desktop-min {                                   // big-desktop-special-minsize 

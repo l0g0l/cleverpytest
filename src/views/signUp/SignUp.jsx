@@ -164,7 +164,7 @@ const Register = () => {
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
                 <div>
-                    <p className="form-p">Already created an account? <Link to='/'><strong>Log in</strong></Link></p>
+                    <p className="form-p">Already created an account? <Link to='/login'><strong>Log in</strong></Link></p>
 
                 </div>
 

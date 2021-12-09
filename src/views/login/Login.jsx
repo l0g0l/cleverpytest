@@ -135,7 +135,7 @@ const Login = (props) => {
                 
 
                 <div >
-                    <p className="account-msg">Still no account? <Link to="./signup"><strong>Sign Up</strong></Link></p>
+                    <p className="account-msg">Still no account? <Link to="/signup"><strong>Sign Up</strong></Link></p>
                 </div>
         </div>
     )

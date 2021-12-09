@@ -15,6 +15,9 @@
 }
 .icon-info {
   width: 8%;
+  @include for-size(desktop-only) {
+   width: 5%;
+  }
 }
 .profile {
   display: flex;
@@ -30,17 +33,17 @@ h1 {
 }
 .user-card {
   font-size: 2em;
-  margin-bottom: .4em;
+  margin-bottom: 0.4em;
 }
 .title-card {
   font-size: 1.1em;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   font-weight: 600;
 }
 .body-card {
   font-size: 1em;
   word-spacing: 1px;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .garbage-icon {
   width: 12%;
@@ -50,17 +53,19 @@ h1 {
   flex-direction: row-reverse;
   align-items: baseline;
   justify-content: space-between;
+
 }
 .btn {
   background-color: transparent;
   font-weight: bold;
 }
 .comments {
-  margin-top: .5em;
+  margin-top: 0.8em;
   & h5 {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
   & p {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
+
 }
