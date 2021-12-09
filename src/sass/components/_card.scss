@@ -15,6 +15,7 @@
 }
 .icon-info {
   width: 8%;
+  cursor: pointer;
   @include for-size(desktop-only) {
     width: 4.5%;
   }
@@ -47,6 +48,7 @@ h1 {
 }
 .garbage-icon {
   width: 12%;
+  cursor: pointer;
   @include for-size(desktop-only) {
     width: 6%;
   }
@@ -60,6 +62,7 @@ h1 {
 .btn {
   background-color: transparent;
   font-weight: bold;
+  cursor: pointer;
   @include for-size(desktop-only) {
     margin-top: 1em;
   }

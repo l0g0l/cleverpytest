@@ -13,6 +13,7 @@
   .scrollup {
     width: 60%;
     animation-name: arrow;
+    cursor: pointer;
     @include for-size(desktop-only) {
       width: 85%;
     }
