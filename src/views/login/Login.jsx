@@ -5,6 +5,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import Header from "../../components/layout/header/Header";
 import { useDispatch, useSelector } from 'react-redux'
+import home from '../../assets/home.png'
 
 
 
@@ -87,8 +88,8 @@ const Login = (props) => {
                     <Header />
                 </header>
             </div>
-            <div lassName="container-welcome">
-                <p className="welcome">Welcome!!</p>
+            <div className="container-welcome">
+                <p><a href="/"><img src={home} className="welcome" alt="home icon" /></a></p>
             </div>
             <main className="form">
                 <Form onSubmit={handleLogin} ref={form}>
@@ -118,11 +119,9 @@ const Login = (props) => {
                             title="password"
                         />
                     </div>
-
                     <button className="btn-login" >
                         <span>Login</span>
                     </button>
-
 
                     {message && (
                         <div >
@@ -134,8 +133,6 @@ const Login = (props) => {
                     <CheckButton style={{ display: "none" }} ref={checkBtn} />
                 </Form>
             </main>
-
-
             <div >
                 <p className="account-msg">Still no account? <Link to="/signup"><strong>Sign Up</strong></Link></p>
             </div>

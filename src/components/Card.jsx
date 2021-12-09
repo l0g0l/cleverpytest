@@ -5,13 +5,10 @@ import infoC from '../assets/infoC.png'
 
 
 const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => {
-    console.log(datacomments)
     //show the card and users content using props
 
     const [showProfile, setShowProfile] = useState(false)
     const [showComments, setShowComments] = useState(false)
-    let newComments = Object.values(datacomments)
-    // console.log(newComments)
 
 
     const toggleShowProfile = () => {
@@ -20,15 +17,12 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
     const toggleShowComments = () => {
         setShowComments(!showComments)
     }
-    //Mirar si logueado poder eliminar post o no
 
-    //I do a filter using id of datausers match with userId of dataposts, if is the same number then I use an object property .name of datausers in 0 position because you only clic in one of them
     return (
         <div className="container-card">
             <div className="content-card">
                 <div className="container-icon-name">
                     <div>
-
                         <h1 className="user-card" style={{ color: datausers.color }}>{datausers.name}</h1>
                     </div>
 
@@ -45,7 +39,6 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
 
                         </div>
                     </>
-
                     :
                     null
                 }
@@ -64,7 +57,6 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                             Comments
                         </button>
                     </div>
-
                 </div>
 
                 {showComments
@@ -74,17 +66,16 @@ const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => 
                             <ul>
                                 {datacomments.map((item => {
                                     return (
-                                    <li>
-                                        <h5>{item.name}</h5>
-                                        <p>{item.body}</p>
-                                    </li>
+                                        <li key={item.id}>
+                                            <h5>{item.name}</h5>
+                                            <p>{item.body}</p>
+                                        </li>
                                     )
-                                
+
                                 }))}
                             </ul>
                         </div>
                     </>
-
                     :
                     null
                 }

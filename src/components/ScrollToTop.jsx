@@ -14,11 +14,11 @@ const ScrollToTop = () => {
   };
 
   useEffect(() => {
-    // El icono aparece cuando ha sobrepasado los 50px de altura y desapare cuando sobrepasa los 900
+
     const toggleVisibility = () => {
       if (window.pageYOffset > 0) {
         setIsVisible(true);
-        }
+      }
       else {
         setIsVisible(false)
       }
@@ -32,7 +32,7 @@ const ScrollToTop = () => {
       {
         isVisible &&
         <div aria-label="Up to Top" onClick={scrollToTop} id="arrowfixed" >
-          <img src={flN} className="scrollup" alt="scrollup icon"/>
+          <img src={flN} className="scrollup" alt="scrollup icon" />
         </div>
       }
 

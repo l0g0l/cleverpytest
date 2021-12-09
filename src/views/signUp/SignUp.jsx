@@ -7,11 +7,11 @@ import validator from 'validator';
 import Header from "../../components/layout/header/Header";
 
 
-
+//Library to validate the form
 const crypto = require('crypto');
 
 const required = (value) => {
-    if(!value.toString().trim().length) {
+    if (!value.toString().trim().length) {
         return (
             <div className="alert" role="alert">
                 Required Field
@@ -21,10 +21,10 @@ const required = (value) => {
 };
 
 const validEmail = (value) => {
-    if  (!validator.isEmail(value)) {
+    if (!validator.isEmail(value)) {
         return (
             <div className="alert " role="alert">
-               Invalid Email
+                Invalid Email
             </div>
         );
     }
@@ -41,7 +41,7 @@ const vusername = (value) => {
 };
 
 const vpassword = (value) => {
-    if ((value.length < 6 || value.length > 10) ) {
+    if ((value.length < 6 || value.length > 10)) {
         return (
             <div className="alert " role="alert">
                 Must be between 6 and 10 characters
@@ -65,7 +65,6 @@ const Register = () => {
         setUsername(name);
     };
 
-
     const onChangeEmail = (e) => {
         const email = e.target.value;
         setEmail(email);
@@ -83,6 +82,7 @@ const Register = () => {
 
         form.current.validateAll();
 
+        //storage data in
         if (checkBtn.current.context._errors.length === 0) {
             if (localStorage.getItem("email") === email) {
                 setMessage('Registered user')
@@ -100,9 +100,9 @@ const Register = () => {
 
     return (
         <div className="container-signup">
-                <div className="header">
+            <div className="header">
                 <header>
-                   <Header/>
+                    <Header />
                 </header>
             </div>
             <main className="form">
@@ -114,11 +114,11 @@ const Register = () => {
                                 <label htmlFor="username">Username</label>
                                 <Input
                                     type="text"
-                                    className="input"                                    id="username"
+                                    className="input" id="username"
                                     value={username}
                                     onChange={onChangeUsername}
                                     validations={[required, vusername]}
-                                    aria-describedby="username" 
+                                    aria-describedby="username"
                                     title="username" />
                             </div>
 
@@ -126,7 +126,7 @@ const Register = () => {
                                 <label htmlFor="email">Email</label>
                                 <Input
                                     type="text"
-                                    className="input"                                    id="email"
+                                    className="input" id="email"
                                     value={email}
                                     onChange={onChangeEmail}
                                     validations={[required, validEmail]}
@@ -138,12 +138,12 @@ const Register = () => {
                                 <label className="label" htmlFor="password">Password</label>
                                 <Input
                                     type="password"
-                                    className="input"                                    id="password"
+                                    className="input" id="password"
                                     value={password}
                                     onChange={onChangePassword}
                                     validations={[required, vpassword]}
                                     aria-describedby="password"
-                                    title="password"/>   
+                                    title="password" />
                             </div>
 
                             <div >
@@ -153,7 +153,7 @@ const Register = () => {
                     )}
                     {message && (
                         <div >
-                            <div 
+                            <div
                                 className={successful ? "success" : "alert "}
                                 role="alert"
                             >
@@ -167,9 +167,7 @@ const Register = () => {
                     <p className="form-p">Already created an account? <Link to='/login'><strong>Log in</strong></Link></p>
 
                 </div>
-
             </main>
-
         </div>
     );
 };

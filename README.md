@@ -66,14 +66,14 @@ If you're not sure if your input is a string, coerce it using input + ''. Passin
 
 - [Node](https://nodejs.org/en/): 10.16.0 or more  
 - [React js](https://es.reactjs.org/)
-- Clone the repository on your local machine (https://github.com/l0g0l/buscadorRepos_FrontEnd.git)
+- Clone the repository on your local machine (https://github.com/l0g0l/cleverpytest.git)
 
 ## Installation
 
 ###### Frontend
 
 ```sh
-`cd buscadorRepos_FrontEnd` go into the folder
+`cd cleverpytest` go into the folder
 ```
 
 Install dependecies and devDependencies
@@ -92,20 +92,47 @@ npm start
 
 ## About The Project
 
-Creation of a GitHub repository finder
+The test consists of designing, implementing and connecting a platform with "cards" for the display of posts or comments made by a user.
 
 
 ### Requirements  
 
--Develop the front end of the app with React.  
+The final functionality of the solution must allow the user to manage and visualise the posts of all the users available in the application.
+The post must contain a display of the user, title and description.
+It must be summarised on a single screen.
+It must allow the user to delete posts.
 
--The application must be SPA (single page application), so that there is no page reloading at any time, and only the minimum necessary content is loaded and rendered with each endpoint change.  
+##### Goals required:
 
--Save log data in the localstorage.  
+Code entirely in TypeScript.
+Typed without any types.
+Code in React
+Use of functional components
+Good identation
+Do not use external libraries that perform the function described in the document. 
 
--Version control management with GiT.
+##### Optional:
 
+Unit testing
+e2e testing
+Scss styles and css variables
+BEM
+Flexbox
+Grid-CSS
+Any sample implementation of the functionality using the Redux store will be appreciated.
 
+##### Extensions:
+
+In addition to the described functionality:
+Editing posts
+Basic layout
+○ Navbar
+○ Sidebar
+○ Content
+○ Breadcrumbs
+Login screen
+Colour palette and style guide
+CSS styles and animations
 
 
 <!-- APP OVERVIEW -->

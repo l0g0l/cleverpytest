@@ -12,17 +12,13 @@ import { removePost } from '../../store/posts'
 
 const Layout = () => {
     const posts_redux = useSelector(state => state.posts); //traerte lo que contenga el store de los posts (posts y posts_loaded)
-    console.log(posts_redux)
     const users_redux = useSelector(state => state.users);//traerte lo que contenga el store de los users (users y users_loaded)
-    console.log(users_redux)
     const comments_redux = useSelector(state => state.comments);//traerte lo que contenga el store de los users (users y users_loaded)
-    console.log(comments_redux)
     const login_redux = useSelector(state => state.login);//traerte lo que contenga el store del login
-    console.log(login_redux)
     const dispatch = useDispatch(); //llamo a la función para poder utilizarla
 
     const [userFilter, setUserFilter] = useState("All") //show all post 
-    const colores = ["#b32f4e", "#6f4794", "#91724d", "#91a80c", "#967403", "#3b6422", "#389c94", "#c27b41", "#4543c5", "#3a3d3c"]
+    const colores = ["#6f4794","#b32f4e",  "#91724d", "#91a80c", "#967403", "#3b6422", "#389c94", "#c27b41", "#4543c5", "#3a3d3c"]
 
 
     useEffect(() => {
@@ -46,7 +42,6 @@ const Layout = () => {
         const getUsers = async () => {
             try {
                 const res = await axios.get(`https://jsonplaceholder.typicode.com/users`)
-                console.log(res.data)
                 res.data.forEach(function (user, index) {
                     user.color = colores[index]
                 })
@@ -122,13 +117,12 @@ const Layout = () => {
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.id)
 
                                 return (
-                                    <div className="cards">
-                                        <Card 
-                                            dataposts={item} 
-                                            key={item.id} 
-                                            delete_post={deletePost} 
-                                            datausers={user} 
-                                            datacomments={comments} 
+                                    <div className="cards" key={item.id}>
+                                        <Card
+                                            dataposts={item}
+                                            delete_post={deletePost}
+                                            datausers={user}
+                                            datacomments={comments}
                                             islogged={login_redux.is_logged} />
                                     </div>
                                 )
@@ -139,20 +133,18 @@ const Layout = () => {
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)
 
                                 return (
-                                    <div className="cards">
-                                        <Card 
-                                            dataposts={item} 
-                                            delete_post={deletePost} 
-                                            key={item.id} 
-                                            datausers={user} 
-                                            datacomments={comments} 
+                                    <div className="cards" key={item.id}>
+                                        <Card
+                                            dataposts={item}
+                                            delete_post={deletePost}                                            
+                                            datausers={user}
+                                            datacomments={comments}
                                             islogged={login_redux.is_logged} />
                                     </div>
                                 )
                             }))
                         :
                         <div>Loading</div>
-
                     }
                 </div>
             </main>

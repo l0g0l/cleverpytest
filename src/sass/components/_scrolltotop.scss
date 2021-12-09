@@ -3,14 +3,19 @@
   top: 27rem;
   right: 1.6rem;
   background-color: transparent !important;
+  @include for-size(desktop-only) {
+    right: 2rem;
+  }
 }
-
 #arrowfixed {
   background-color: transparent !important;
   position: fixed;
   .scrollup {
     width: 60%;
     animation-name: arrow;
+    @include for-size(desktop-only) {
+      width: 85%;
+    }
   }
   @keyframes arrow {
     0% {

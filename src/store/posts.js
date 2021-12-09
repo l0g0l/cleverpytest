@@ -21,7 +21,6 @@ export function removePost(post) {
 //Dispatch es la manera de poder actualizar el store
 //Reducer. Inicilizamos el state siempre, en este caso con un obj de posts [] y varaible de control que nos sirve para saber si los post están vacíos o no (false) y necesita el action como parámetros obligatorios
 function posts(state = { posts: [], posts_loaded: false }, action) {
-    console.log(state, action,)
     switch (action.type) {
         case LOAD_POSTS: //Action
             return {
@@ -36,7 +35,6 @@ function posts(state = { posts: [], posts_loaded: false }, action) {
                 posts_loaded: action.posts_loaded
             };
         case REMOVE_POST://Action
-            console.log(state)
             const filtered = state.posts.filter(a => a.id !== action.post)
             return {
                 posts: [...filtered],
@@ -48,7 +46,6 @@ function posts(state = { posts: [], posts_loaded: false }, action) {
 }
 //Reducer
 function users(state = { users: [], users_loaded: false }, action) {
-    console.log(state, action)
     switch (action.type) {
         case LOAD_USERS:
             return {
@@ -68,7 +65,6 @@ function users(state = { users: [], users_loaded: false }, action) {
 }
 //Reducer
 function comments(state = { comments: [], comments_loaded: false }, action) {
-    console.log(state, action)
     switch (action.type) {
         case LOAD_COMMENTS:
             return {
@@ -86,8 +82,8 @@ function comments(state = { comments: [], comments_loaded: false }, action) {
             return state;
     }
 }
+//Este reducer lo creo en false para guardarlo así en el store
 function login(state = { is_logged: false }, action) {
-    console.log(state, action,)
     switch (action.type) {
         case LOGIN: //Action
             return {
@@ -109,7 +105,7 @@ const postApp = combineReducers({
     posts: posts,
     users: users,
     comments: comments,
-    login:login
+    login: login
 });
 
 export default postApp;

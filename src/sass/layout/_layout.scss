@@ -11,6 +11,6 @@
 .cards {
   @include for-size(desktop-only) {
     width: 48%;
-    margin: 10px;
+    margin: 0.7em;
   }
 }

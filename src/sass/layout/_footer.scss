@@ -1,8 +1,11 @@
 .container-footer {
-    font-size: .7rem;
-    margin-top: 2em;
-    font-weight: bold;
+  font-size: 0.7rem;
+  margin-top: 2em;
+  font-weight: bold;
+  @include for-size(desktop-only) {
+    font-size: 1rem;
+  }
 }
 .footer {
-    text-align: center;
+  text-align: center;
 }

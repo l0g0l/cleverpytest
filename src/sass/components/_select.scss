@@ -1,73 +1,44 @@
 .container-label {
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-size: 1rem;
+  & .label-txt1 {
     margin-bottom: 1.5em;
-    text-align: center;
-    font-size: .8rem;
-    & .label-txt1, .label-txt2 {
-        margin-bottom: 1.5em;
-        @include for-size(tablet) {
-            font-size: 1.2rem;
-        }
+    @include for-size(tablet) {
+      font-size: 1.2rem;
     }
+  }
+}
+.label-txt2 {
+  margin-bottom: 1.5em;
+  text-align: center;
 }
 .link-login {
-    font-size: 1em;
-    font-weight: bold;
-    color: $link-hover;
-    margin-left: 0.3em;
+  font-size: 1em;
+  font-weight: bold;
+  color: $link-hover;
+  margin-left: 0.3em;
 }
 .select {
- text-align: center;
- 
+  text-align: center;
 }
-select  {
-    height: 2rem;
-    width: 12rem;
-    margin-bottom: 1.5em;
-    cursor: pointer; 
-    background-color: $select;
-    border-radius: .4em;
-    @include for-size(desktop-only) {
-        width: 21rem;
-      }
+select {
+  height: 2rem;
+  width: 12rem;
+  margin-bottom: 1.5em;
+  cursor: pointer;
+  background-color: $select;
+  border-radius: 0.4em;
+  @include for-size(desktop-only) {
+    width: 21rem;
+  }
 }
 option {
-    text-align: center;
+  text-align: center;
 }
 select option {
-    @include for-size(desktop-only) {
-        @include optionFontSize (1.2rem)
-      }
- 
- }
-select option[value="1"] {
-   color: $option1;
+  @include for-size(desktop-only) {
+    @include optionFontSize(1.2rem);
+  }
+}
 
-}
-select option[value="2"] {
-    color: $option2;
- 
-}
-select option[value="3"] {
-    color: $option3;
-}
-select option[value="4"] {
-    color: $option4;
-}
-select option[value="5"] {
-   color:$option5;
-}
-select option[value="6"] {
-    color: $option6;
-}
-select option[value="7"] {
-   color: $option7;
-}
-select option[value="8"] {
-    color: $option8;
-}
-select option[value="9"] {
-    color: $option9;
-}
-select option[value="10"] {
-    color:$option10;
-}

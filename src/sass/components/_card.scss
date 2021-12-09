@@ -16,7 +16,7 @@
 .icon-info {
   width: 8%;
   @include for-size(desktop-only) {
-   width: 4.5%;
+    width: 4.5%;
   }
 }
 .profile {
@@ -49,21 +49,20 @@ h1 {
   width: 12%;
   @include for-size(desktop-only) {
     width: 6%;
-   }
+  }
 }
 .containericon-btns {
   display: flex;
   flex-direction: row-reverse;
   align-items: baseline;
   justify-content: space-between;
-
 }
 .btn {
   background-color: transparent;
   font-weight: bold;
   @include for-size(desktop-only) {
-   margin-top: 1em;
-   }
+    margin-top: 1em;
+  }
 }
 .comments {
   margin-top: 0.8em;
@@ -74,5 +73,4 @@ h1 {
     font-size: 0.8rem;
     margin-bottom: 1em;
   }
-
 }
