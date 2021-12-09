@@ -1,4 +1,4 @@
-//New Update of Swich, now is Routes
+//New Update of Swich, now is Routes and components are elements and inside braquets put a component sintaxis
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../views/home/Home';
 import Login from '../views/login/Login';
@@ -9,9 +9,9 @@ const Routing = () => {
     return (
         <Router>
             <Routes>
-                <Route  exact path='/' element={<Login/>}/>
+                <Route  path="/" element={<Home/>}/>
+                <Route  exact path='/login' element={<Login/>}/>
                 <Route path='/signup' element={<SignUp/>}/>
-                <Route  path="/home" element={<Home/>}/>
             </Routes>
         </Router>
 

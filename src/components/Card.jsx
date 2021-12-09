@@ -1,7 +1,8 @@
 import papeN from '../assets/papeN.png'
 import { useState } from 'react'
-const Card = ({ dataposts, datausers, datacomments, delete_post }) => {
-    console.log(datacomments)
+import infoC from '../assets/infoC.png'
+const Card = ({ dataposts, datausers, datacomments, delete_post, islogged }) => {
+    // console.log(datacomments)
     //show the card and users content using props
 
     const [showProfile, setShowProfile] = useState(false)
@@ -20,11 +21,36 @@ const Card = ({ dataposts, datausers, datacomments, delete_post }) => {
     return (
         <div className="container-card">
             <div className="content-card">
-                <h1 className="user-card" style={{ color: datausers.color }}>{datausers.name}</h1>
+                <div className="container-icon-name">
+                    <div>
+
+                        <h1 className="user-card" style={{ color: datausers.color }}>{datausers.name}</h1>
+                    </div>
+
+                    <img src={infoC} alt="icon extra info profile" className="icon-info" />
+
+                    {showProfile
+                        ?
+                        <>
+                            <div>Email: {datausers.email}</div>
+                            <div>Phone: {datausers.phone}</div>
+                            <div>URL:   {datausers.website}</div>
+                        </>
+
+                        :
+                        null
+                    }
+                </div>
                 <h3 className="title-card">{dataposts.title}</h3>
                 <p className="body-card">{dataposts.body}</p>
                 <div className="containericon-btns">
-                    <img src={papeN} alt="garbage icon" className="garbage-icon" onClick={() => delete_post(dataposts.id)} />
+                    {
+                        islogged
+                            ?
+                            <img src={papeN} alt="garbage icon" className="garbage-icon" onClick={() => delete_post(dataposts.id)} />
+                            :
+                            null
+                    }
                     <div >
                         <button onClick={toggleShowComments} style={{ color: datausers.color }} className="btn">
                             Comments
@@ -36,16 +62,14 @@ const Card = ({ dataposts, datausers, datacomments, delete_post }) => {
                         </button>
                     </div>
                 </div>
-                {showProfile
-                    ?
-                    <div>Profile</div>
-                    :
-                    null
-                }
+
                 {showComments
                     ?
-                    <div>{datacomments.name}
-                    {datacomments.body}</div>
+                    <>
+                        <div>{datacomments.name}</div>
+                        <div>{datacomments.body}</div>
+                    </>
+
                     :
                     null
                 }

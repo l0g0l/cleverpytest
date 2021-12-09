@@ -16,6 +16,8 @@ const Layout = () => {
     console.log(users_redux)
     const comments_redux = useSelector(state => state.comments);//traerte lo que contenga el store de los users (users y users_loaded)
     console.log(comments_redux)
+    const login_redux = useSelector(state => state.login);//traerte lo que contenga el store del login
+    console.log(login_redux)
     const dispatch = useDispatch(); //llamo a la función para poder utilizarla
 
     const [userFilter, setUserFilter] = useState("All") //show all post 
@@ -43,6 +45,7 @@ const Layout = () => {
         const getUsers = async () => {
             try {
                 const res = await axios.get(`https://jsonplaceholder.typicode.com/users`)
+                console.log(res.data)
                 res.data.forEach(function (user, index) {
                     user.color = colores[index]
                 })
@@ -103,7 +106,8 @@ const Layout = () => {
                     <Select userfilter={userFilter} setuserfilter={setUserFilter} datausers={users_redux.users} />
                     :
                     <div>Loading users</div>
-                }                {/*posts it's an array, I iterate it and I paint as many cards as there are posts */}
+                }                
+                {/*posts it's an array, I iterate it and I paint as many cards as there are posts. */}
 
                 {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
                     ?
@@ -111,21 +115,21 @@ const Layout = () => {
                         ?
                         posts_redux.posts.map((item => {
                             const user = users_redux.users.filter(user => user.id === item.userId)[0]
-                            // const comments = comments_redux.comments.filter(comment => comments.postId === item.userId)[0]
+                            const comments = comments_redux.comments.filter(comment => comment.postId == item.id)[0]
 
                             return (
                                 <>
-                                    <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments_redux.comments} />
+                                    <Card dataposts={item} key={item.id} delete_post={deletePost} datausers={user} datacomments={comments} islogged={login_redux.is_logged}/>
                                 </>
                             )
                         }))
                         :
                         posts_redux.posts.filter(post => post.userId == userFilter).map((item => {
                             const user = users_redux.users.filter(user => user.id === item.userId)[0]
-                            // const comments = comments_redux.comments.filter(comment => comments.postId === item.userId)[0]
+                            const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)[0]
 
                             return (
-                                <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments_redux.comments} />
+                                <Card dataposts={item} delete_post={deletePost} key={item.id} datausers={user} datacomments={comments} islogged={login_redux.is_logged}/>
                             )
                         }))
                     :

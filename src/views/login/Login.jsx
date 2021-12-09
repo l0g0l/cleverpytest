@@ -4,6 +4,8 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import Header from "../../components/layout/header/Header";
+import { useDispatch, useSelector } from 'react-redux'
+
 
 
 const crypto = require('crypto');
@@ -19,6 +21,10 @@ const required = (value) => {
 };
 
 const Login = (props) => {
+    const login_redux = useSelector(state => state.login);//traerte lo que contenga el store del login
+    console.log(login_redux)
+    const dispatch = useDispatch(); //llamo a la función para poder utilizarla
+
     const form = useRef();
     const checkBtn = useRef();
     console.log(form, checkBtn, props)
@@ -55,8 +61,11 @@ const Login = (props) => {
                 const password_hash = crypto.createHash('sha256').update(password).digest('base64')
                 if (localStorage.getItem("password") === password_hash) {
                     console.log(props)
-                    navigate('/home')
-                    window.location.reload();
+                    dispatch({ // manda al store el login a true, es decir, que ya está logado
+                        type: 'LOGIN',
+                        is_logged: true
+                    })
+                    navigate('/')
                 } else {
                     setLoading(false);
                     setMessage('Invalid Credentials');
