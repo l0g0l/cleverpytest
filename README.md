@@ -93,28 +93,43 @@ The test consists of designing, implementing and connecting a platform with "car
 
 ### Requirements  
 
-The final functionality of the solution must allow the user to manage and visualise the posts of all the users available in the application.
-The post must contain a display of the user, title and description.
-It must be summarised on a single screen.
-It must allow the user to delete posts.
+The final functionality of the solution must allow the user to manage and visualise the posts of all the users available in the application.  
+
+The post must contain a display of the user, title and description.  
+
+It must be summarised on a single screen.  
+
+It must allow the user to delete posts.  
+
 
 ##### Goals required:
 
-Code entirely in TypeScript.
-Typed without any types.
-Code in React
-Use of functional components
-Good identation
+Code entirely in TypeScript.  
+
+Typed without any types.  
+
+Code in React  
+
+Use of functional components  
+
+Good identation  
+
 Do not use external libraries that perform the function described in the document. 
 
 ##### Optional:
 
-Unit testing
-e2e testing
-Scss styles and css variables
-BEM
-Flexbox
-Grid-CSS
+Unit testing  
+
+e2e testing  
+
+Scss styles and css variables  
+
+BEM  
+
+Flexbox  
+
+Grid-CSS  
+
 Any sample implementation of the functionality using the Redux store will be appreciated.
 
 ##### Extensions:
@@ -125,10 +140,14 @@ Basic layout
 - Navbar
 - Sidebar
 - Content
-- Breadcrumbs
-Login screen
-Colour palette and style guide
-CSS styles and animations
+- Breadcrumbs  
+
+Login screen  
+
+Colour palette and style guide  
+
+CSS styles and animations  
+
 
 
 <!-- APP OVERVIEW -->
