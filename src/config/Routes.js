@@ -1,5 +1,5 @@
 //New Update of Swich, now is Routes and components are elements and inside braquets put a component sintaxis
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../views/home/Home';
 import Login from '../views/login/Login';
 import SignUp from '../views/signUp/SignUp';

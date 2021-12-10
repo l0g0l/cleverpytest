@@ -32,6 +32,7 @@ const Login = (props) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    // eslint-disable-next-line
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
@@ -89,7 +90,7 @@ const Login = (props) => {
                 </header>
             </div>
             <div className="container-welcome">
-                <p><a href="/"><img src={home} className="welcome" alt="home icon" /></a></p>
+                <p><Link to="/"><img src={home} className="welcome" alt="home icon" /></Link></p>
             </div>
             <main className="form">
                 <Form onSubmit={handleLogin} ref={form}>

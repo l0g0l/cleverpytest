@@ -82,7 +82,7 @@ const Layout = () => {
         getPosts()
         getUsers()
         getComments()
-
+// eslint-disable-next-line
     }, [dispatch])
 
     const deletePost = (postid) => {
@@ -110,10 +110,12 @@ const Layout = () => {
                 <div className="container-cards">
                     {posts_redux.posts_loaded && users_redux.users_loaded && comments_redux.comments_loaded
                         ?
+                        // eslint-disable-next-line
                         userFilter == "All"
                             ?
                             posts_redux.posts.map((item => {
                                 const user = users_redux.users.filter(user => user.id === item.userId)[0]
+                                // eslint-disable-next-line
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.id)
 
                                 return (
@@ -128,8 +130,10 @@ const Layout = () => {
                                 )
                             }))
                             :
+                            // eslint-disable-next-line
                             posts_redux.posts.filter(post => post.userId == userFilter).map((item => {
                                 const user = users_redux.users.filter(user => user.id === item.userId)[0]
+                                // eslint-disable-next-line
                                 const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)
 
                                 return (
