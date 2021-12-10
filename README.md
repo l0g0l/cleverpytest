@@ -6,20 +6,17 @@
     <a href="https://l0g0l.github.io/cleverpytest/">View Web Application</a>
   </p>
   <p align="center">
-<img src="https://www.codefactor.io/repository/github/l0g0l/buscadorrepos_frontend/badge" alt="Codefactor Grade">
+<img src="https://www.codefactor.io/repository/github/l0g0l/cleverpytest/badge" alt="Codefactor Grade">
 </p>
 <p align="center">
 <img src="https://sonarcloud.io/api/project_badges/measure?project=l0g0l_buscadorRepos_FrontEnd&metric=alert_status" alt="Sonar Quality Gate"></p>
 
-<p align="center">
-<img src="public/images/accesibilityTest.png" alt="Accesibility test" width="400"></p>
-</p>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#learn-more">Learn More</a></li>
+    <li><a href="#learn-more">Frameworks and Libraries</a></li>
     <li><a href="#prerequisites">Prerequisites</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#about-the-project">About The Project</a></li>
@@ -29,7 +26,7 @@
   </ol>
 </details>
 
-## Learn more
+## Frameworks and Libraries
 
 To be more familiar with the libraries and frameworks I have mainly used I will leave a short explanation here:
 
@@ -64,7 +61,6 @@ If you're not sure if your input is a string, coerce it using input + ''. Passin
 
 ### Prerequisites
 
-- [Node](https://nodejs.org/en/): 10.16.0 or more  
 - [React js](https://es.reactjs.org/)
 - Clone the repository on your local machine (https://github.com/l0g0l/cleverpytest.git)
 
@@ -126,10 +122,10 @@ Any sample implementation of the functionality using the Redux store will be app
 In addition to the described functionality:
 Editing posts
 Basic layout
-○ Navbar
-○ Sidebar
-○ Content
-○ Breadcrumbs
+- Navbar
+- Sidebar
+- Content
+- Breadcrumbs
 Login screen
 Colour palette and style guide
 CSS styles and animations
@@ -138,17 +134,15 @@ CSS styles and animations
 <!-- APP OVERVIEW -->
 
 ## App Overview  
+<img src="/src/assets/CleverPyAppDesign.png" alt="view mobile size " width="700"  >
+<br>
+<br>
+<img src="/src/assets/mobile.gif" alt="view mobile size " width="150"  >
+<img src="/src/assets/desktop.gif" alt="view desktop size " width="500" >
 
-<img src="" alt="view complete aplication " >
 
 <br>
 <br>
-
-
-
-<br>
-<br>
-
 <br>
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -156,17 +150,18 @@ CSS styles and animations
 ## Languages and Tools:
 
 
-The project is deployed in [Heroku](https://www.heroku.com/)  
+The project is deployed in [GitHub Pages](https://pages.github.com/)  
 <br>
 
 <p align="left">
-    <a href="https://sass-lang.com/" target="_blank"> 
-        <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="SASS" width="40" height="40"/>
-    </a> 
-    <a href="https://www.w3schools.com/css/" target="_blank"> 
+      <a href="https://www.w3.org/html/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> 
+         <a href="https://www.w3schools.com/css/" target="_blank"> 
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/>
     </a> 
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+          <a href="https://sass-lang.com/" target="_blank"> 
+        <img src="https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="SASS" width="40" height="40"/>
+    </a> 
+     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
     </a>
     <a href="https://www.mongodb.com/" target="_blank"> 
@@ -175,10 +170,7 @@ The project is deployed in [Heroku](https://www.heroku.com/)
     </a>  
     <a href="https://git-scm.com/" target="_blank">
         <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
-    </a>
-       <a href="https://www.heroku.com/home" target="_blank">
-        <img src="https://www.nicepng.com/png/full/223-2233246_heroku-logo-salesforce-heroku.png" alt="heroku" width="40" height="40"/>
-    </a>
+ 
     
 </p>
 

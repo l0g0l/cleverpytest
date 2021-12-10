@@ -29,6 +29,7 @@ select {
   cursor: pointer;
   background-color: $select;
   border-radius: 0.4em;
+  border: 0.01em solid #ccc;
   @include for-size(desktop-only) {
     width: 21rem;
   }

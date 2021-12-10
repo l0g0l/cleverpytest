@@ -4,7 +4,7 @@ import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import Header from "../../components/layout/header/Header";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import home from '../../assets/home.png'
 
 
@@ -22,14 +22,9 @@ const required = (value) => {
 };
 
 const Login = (props) => {
-    const login_redux = useSelector(state => state.login);//traerte lo que contenga el store del login
-    console.log(login_redux)
     const dispatch = useDispatch(); //llamo a la función para poder utilizarla
-
     const form = useRef();
     const checkBtn = useRef();
-    console.log(form, checkBtn, props)
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     // eslint-disable-next-line

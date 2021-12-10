@@ -37,11 +37,13 @@
   height: 2rem;
   border-radius: 6px;
   margin-top: 0.3em;
+  border: 0.01em solid #ccc;
 }
 .btn-login {
   padding: 0.5em;
   border-radius: 6px;
   margin-bottom: 1em;
+  background-color: #ccc;
   cursor: pointer;
 }
 .alert {
