@@ -9,7 +9,7 @@
 <img src="https://www.codefactor.io/repository/github/l0g0l/cleverpytest/badge" alt="Codefactor Grade">
 </p>
 <p align="center">
-<img src="https://sonarcloud.io/api/project_badges/measure?project=l0g0l_buscadorRepos_FrontEnd&metric=alert_status" alt="Sonar Quality Gate"></p>
+<img src="https://sonarcloud.io/api/project_badges/measure?project=l0g0l_cleverpytest&metric=alert_status" alt="Sonar Quality Gate"></p>
 
 
 <!-- TABLE OF CONTENTS -->
