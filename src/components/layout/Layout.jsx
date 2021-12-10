@@ -134,7 +134,7 @@ const Layout = () => {
                             posts_redux.posts.filter(post => post.userId == userFilter).map((item => {
                                 const user = users_redux.users.filter(user => user.id === item.userId)[0]
                                 // eslint-disable-next-line
-                                const comments = comments_redux.comments.filter(comment => comment.postId == item.userId)
+                                const comments = comments_redux.comments.filter(comment => comment.postId == item.id)
 
                                 return (
                                     <div className="cards" key={item.id}>
